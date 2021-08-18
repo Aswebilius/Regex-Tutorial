@@ -8,7 +8,7 @@ Regex is a string of text used to create patterns to locate and match text.
 
 Here is an example of one such Regex: 
 
-/[a-z0-9_-]{5,16}/g
+/^[a-z0-9_-]{5,16}$/g
 
 This will look for text that is 5 to 16 characters long, contains numbers from 0-9, and can contain hyphens and underscores.
 
@@ -30,7 +30,11 @@ This will look for text that is 5 to 16 characters long, contains numbers from 0
 
 ### Anchors
 
-Anchors, "^" and "$", 
+Anchors, "^" and "$", are special characters used to match specific words at the beginning and end of the string respectively. This is used to further find specific matches. If both are used in the Regex such as ^Disney LandS it will match to the exact string. Here are a few examples of how these anchors work: 
+
+^Match Me = find all strings that start with the word 'Match'
+Match Me$ = find all strings that end with the word 'Me'
+^Match Me$ = find this exact string
 
 ### Quantifiers
 
