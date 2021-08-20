@@ -32,9 +32,11 @@ This will look for text that is 5 to 16 characters long, contains numbers from 0
 
 Anchors, "^" and "$", are special characters used to match specific words at the beginning and end of the string respectively. This is used to further find specific matches. If both are used in the Regex such as ^Disney Land$ it will match to the exact string. Here are a few examples of how these anchors work: 
 
-^Match Me = find all strings that start with the word 'Match'
-Match Me$ = find all strings that end with the word 'Me'
-^Match Me$ = find this exact string
+^Match Me = find all strings that start with the word 'Match'.
+
+Match Me$ = find all strings that end with the word 'Me'.
+
+^Match Me$ = find this exact string.
 
 ### Quantifiers
 
@@ -46,7 +48,7 @@ Qunatifiers are specific characters ({}, (), *, +, ?) within the regular express
 {}} matches a string containing the first character followed by how ever many the number in the brackets of the last character in the string
 
 
-Examples:
+Example Expressions:
 
 String = 'what how who where when why'
 
@@ -60,7 +62,13 @@ String = 'what how who where when why'
 
 ### OR Operator
 
+OR Operators match to a choice of regular expressions when the character representing the OR Operation, '|' and '[]' are placed between any two characters in the  expression. The result is a combination of the two characters to match.
 
+Example Expressions:
+
+h(i|s)  matches a string that has 'h' followed by an 'i' or a 'e' and also captures those characters.
+
+h[is]   matches a string that has 'h' without capturing 'i' or 'e'.
 
 ### Character Classes
 
@@ -76,24 +84,63 @@ Examples of these Character Classes are as follow:
 \W   will match with any single non-character that is a-z
 \S    will match with a single non-blank white space
 
-Examples:
+Example Expressions:
+
 ([a-z])\w matches to a single character in the range from a-z in the string.
+
 ([0-9])\d matches to a single digit in the range of 0-9 found in the string.
+
 ([a-z])\s matches to a single white space in the string.
 
 ### Flags
 
+Flags are additional search parameters what when added to an expression adjusts the scope of the search and in some cases what the search is looking for. The flags use the following characters: 'g', 'm', 'i', 'u', 's', and 'y', with each one adjusting the search of the expression in a unique way. These flags can be used together but, not all browsers support some of them, and certain ones cancel out other flags.
+
+Examples:
+
+/g = Global, which makes the expression search for a match through out the entire string instead of ending the search after finding the first match.
+
+/m = Multi-line, which makes the expression utilize the Anchors to match the start and end of a line omitting the rest of the string.
+
+/i = Insensitive, which removes case-sensitivity from the expression so it will accept characters of both upper and lower case.
+
+/u = Unicode, which makes the expressions search for a Unicode escape sequence in the string such as [FFFFF]. It is worth mentioning that not all browsers support this feature of regex.
+
+s/ = Single line/Dotall, which makes the expression match any character even on a new line. Again, it is worth mentioning that not all browsers support this feature of regex.
+
+y/ = Sticky, which makes the expression match only from its last index position and ignore the Global flag. Again, not all browsers support this feature of regex.
+
+Example Expressions:
+
+
+
 ### Grouping and Capturing
+
+Grouping matches a characters of a string so that it is matched as a block.
+
+Example Expressions:
+
+
 
 ### Bracket Expressions
 
+
+
 ### Greedy and Lazy Match
+
+
 
 ### Boundaries
 
+
+
 ### Back-references
 
+
+
 ### Look-ahead and Look-behind
+
+
 
 ## Author
 
