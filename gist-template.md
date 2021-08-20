@@ -112,7 +112,15 @@ y/ = Sticky, which makes the expression match only from its last index position 
 
 Example Expressions:
 
+String Line 1 = 'what how who where when why'
 
+String Line 2 = 'why how who where when what'
+
+([a-z])/g  = matches all characters that are 'a' through 'z' throughout the entire string and including those on the next line.
+
+^(what)/m = matches the first 'what' at the start String line 1 but, (what)$/m will match with the last 'what' at the end of String line 2.
+
+(what)/i = matches to 'what' no matter if it is 'what', 'What', or 'wHat' in the string.
 
 ### Grouping and Capturing
 
