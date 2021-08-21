@@ -159,11 +159,21 @@ Example Expressions:
 
 ### Boundaries
 
+Boundaries are the spaces between characters in the string and consist of two specific characters '\b' and '\B'.
 
+(what)\b = Matches a word boundary position between a word character and non-word character or position.
+
+(what)\B = Matches a position that is not a word boundary.
 
 ### Back-references
 
+When grouping is used the captured group is saved in memory for and back-referencing is the action of using these matches.
 
+Example Expression:
+
+([what])\1 = Matches the same text that was matched by the first capturing group.
+
+([what])([who])\2\1 = Matches to the same text that was matched by the second and first capturing groups.
 
 ### Look-ahead and Look-behind
 
