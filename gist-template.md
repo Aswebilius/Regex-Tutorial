@@ -128,15 +128,34 @@ Grouping matches a characters of a string so that it is matched as a block.
 
 Example Expressions:
 
+() = is use to capture a group of characters in the string.
 
+(?:) = disables capturing the group of selected characters in the string.
+
+(?<>) =  names the group of selected characters.
 
 ### Bracket Expressions
 
+Bracket Expressions utilize `[]` to match any single character or a to create a range of characters to match to within the brackets. 
+Interestingly the anchor '^' when used in the brackets first will make it so that the expression tries to match with any character not in the brackets. 
 
+Example Expressions:
+
+([a-z])/g = matches to characters in the range of 'a' to 'z' within the string.
+
+([^a-d])/g = matches to any characters not in the range of 'a' to 'd' within the string.
 
 ### Greedy and Lazy Match
 
+Greedy and Lazy matching utilize quantifiers that widen the scope of the search of the match through the text as far as possible.
 
+Example:
+
+* + {} are the quanitifers used to initiate a Greedy or Lazy Match
+
+Example Expressions:
+
+(w+?) = matches the 'w' character as few times as possible throughout the string in a Lazy Match.
 
 ### Boundaries
 
