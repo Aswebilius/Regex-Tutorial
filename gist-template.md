@@ -177,7 +177,13 @@ Example Expression:
 
 ### Look-ahead and Look-behind
 
+Look-ahead and Look-behind use the anchors '^' and '$' to specifically match with characters and then ends the search. The result will be either 'Match' or 'No Match'. Look-ahead and Look-behind does not capture characters but just determines if a match has occured or not.
 
+Example Expressions:
+
+w(?=h) = matches a 'w' as long as it is followed by 'h' but, 'h' won't be included in the match.
+
+(?<=h)o = matches an 'o' as long as it is preceded by an 'h' but, 'h' won't be included in the match.
 
 ## Author
 
