@@ -8,9 +8,9 @@ Regex is a string of text used to create patterns to locate and match text.
 
 Here is an example of one such Regex: 
 
-/^[a-z0-9_-]{5,16}$/g
+/^(https?:\/\/)?([\da-z\.-]+)\.([a-z\.]{2,6})([\/\w \.-]*)*\/?$/
 
-This will look for text that is 5 to 16 characters long, contains numbers from 0-9, and can contain hyphens and underscores.
+This will look for any and all characters 'a' through 'z', will include '\', '.', and '-'. This regex is looking to match with URLs.
 
 ## Table of Contents
 
