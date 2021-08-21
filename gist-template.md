@@ -187,4 +187,5 @@ w(?=h) = matches a 'w' as long as it is followed by 'h' but, 'h' won't be includ
 
 ## Author
 
-Austin Swebilius is a future Front End Web Developer currently attending the Fullstack Development Coding Boot Camp at the University of Central Florida. Here is his Git Hub: 
+Austin Swebilius is a future Front End Web Developer currently attending the Fullstack Development Coding Boot Camp at the University of Central Florida. Here is his Git Hub: https://gist.github.com/Aswebilius/18267b1ded7f328d0b8d6ca42f180de7
+
